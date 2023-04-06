@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="one">
+      <h2 id="h">I am JavaScript</h2>
+      <p id="main"></p>
+      <h4 id="post">I am postman</h4>
+    </div>
+
+    <button onclick="foo()">Remove postman</button>
+    <script>
+      let p = document.getElementById("main").innerHTML = "This is Html";
+
+      //create element
+      let para = document.createElement("p");
+      //adding text to para 
+      let textNode = document.createTextNode("Hello i am a text node");
+      //adding child to parent para
+      para.appendChild(textNode);
+
+      let div = document.getElementById("one");
+      div.appendChild(para); 
+
+      //insertBefore it will insert before the para
+      const child = document.getElementById("h");
+      div.insertBefore(para,child);
+
+      //remove element
+      
+      function foo(){
+        // document.getElementById("post").remove();
+        const c = document.getElementById("post");
+        div.removeChild(c);
+        }
+      
+        //replace child
+        // div.replaceChild(para,child)
+
+    </script>
+  </body>
+</html>
